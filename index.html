@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phòng ôn luyện</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Thêm favicon -->
+</head>
+<body>
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+  
+  <div class="background-blur"></div> <!-- Thêm lớp phủ làm mờ -->
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <img src="bay.png" alt="Loading Airplane" class="loading-airplane"> <!-- Thêm hình ảnh máy bay -->
+  </div>
+
+  <div class="container" style="display: none;"> <!-- Ban đầu ẩn container -->
+    <div class="form-container">
+      <!-- Logo -->
+      <img src="logo.png" alt="Logo Khảo Thí Online" class="logo">
+      
+      <!-- Nhãn thông báo -->
+      <div class="label-container">
+        <label for="code-input" class="label">Mã định danh / Mã đề thi</label>
+      </div>
+      
+      <!-- Nhóm nhập mã -->
+      <div class="input-group" id="code-input">
+        <input type="text" maxlength="1" class="input-box" aria-label="Ký tự thứ nhất">
+        <input type="text" maxlength="1" class="input-box" aria-label="Ký tự thứ hai">
+        <input type="text" maxlength="1" class="input-box" aria-label="Ký tự thứ ba">
+        <input type="text" maxlength="1" class="input-box" aria-label="Ký tự thứ tư">
+        <input type="text" maxlength="1" class="input-box" aria-label="Ký tự thứ năm">
+        <input type="text" maxlength="1" class="input-box" aria-label="Ký tự thứ sáu">
+      </div>
+      
+      <!-- Nút bấm -->
+      <button class="submit-btn" type="button" id="submit-button">Tiếp theo</button>
+      
+      <!-- Thông báo -->
+      <div id="notification" class="notification"></div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-title">Thông báo hướng dẫn thi</span>
+      <p>- Nhập đầy đủ họ và tên kèm số điện thoại ở phía sau (Ví dụ: Nguyễn Huy Hoàng 0123456789)</p>
+      <p>- Khuyến khích nhập đúng thông tin.</p>
+      <p><b>Lưu ý: </b>Những thông tin trên để thuận tiện cho việc tra cứu kết quả. </p>
+      <button id="confirm-button" class="confirm-btn">Xác nhận</button>
+    </div>
+  </div>
+
+  <!-- Error Modal -->
+  <div id="error-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-title">Mã không chính xác</span>
+      <p>Mã bạn nhập chưa chính xác. Vui lòng thử lại.</p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
